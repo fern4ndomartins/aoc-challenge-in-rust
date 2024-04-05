@@ -26,7 +26,7 @@ fn main() {
     for x in v[0..3].iter() {
         ans = ans + x;
     }
-    println!("{}", ans);
+    println!("{}", ans); // resposta
 }
 
 
