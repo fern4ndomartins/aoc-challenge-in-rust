@@ -1,7 +1,7 @@
 fn main() {
 
     let mut inp:String = String::new();
-
+    
     match std::fs::read_to_string("inp1.txt") {
         Ok(contents) => {
             inp = contents;
