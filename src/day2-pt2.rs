@@ -1,8 +1,14 @@
 fn main() {
-    let mut inp = r#"B Y
-    A Z
-    C Z
-    A Y"#.to_string();
+    let mut inp:String = String::new();
+
+    match std::fs::read_to_string("inp2.txt") {
+        Ok(contents) => {
+            inp = contents;
+        }
+        Err(err) => {
+            println!("Erro: {}", err);
+        }
+    }
     inp.retain(|c| !c.is_whitespace());
     let mut pts = 0;
     for x in (0..inp.len()-1).step_by(2) {
